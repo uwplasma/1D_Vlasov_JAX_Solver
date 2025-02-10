@@ -12,11 +12,12 @@ from scipy.stats import linregress
 
 jax.config.update("jax_enable_x64", True)
 
-
 m_max = 400
 t_span = jnp.linspace(0, 20, 2001)
 k_values = jnp.linspace(0.1, 1, 100)
 nu = 0
+
+
 # C_values = w/k_values/1j
 # print(C_values)
 # print(w)
@@ -25,8 +26,8 @@ nu = 0
 def objective(f, t, k, v_e):
     # dfm_dt = jnp.zeros_like(f)
     indices = jnp.arange(len(f))
-    dfm_dt = -1j * jnp.sqrt(2) * k * (jnp.roll(f, 1) * jnp.sqrt((indices + 1) / 2) +
-              jnp.sqrt(indices / 2) * jnp.roll(f, -1) + v_e * f)
+    dfm_dt = -1j * jnp.sqrt(2) * k * (jnp.roll(f, -1) * jnp.sqrt((indices + 1) / 2) +
+                                      jnp.sqrt(indices / 2) * jnp.roll(f, 1) + v_e * f)
     dfm_dt = dfm_dt.at[1].add(-(1j / k) * f[0])
     dfm_dt = dfm_dt.at[0].set(-1j * jnp.sqrt(2) * k * (f[1] * jnp.sqrt(1 / 2) + v_e * f[0]))
     dfm_dt = dfm_dt.at[-1].set(-1j * jnp.sqrt(2) * k * (jnp.sqrt(indices[-1] / 2) * f[-2] + v_e * f[-1]))
@@ -52,10 +53,10 @@ mathematica_data = pd.read_csv('damping_rate.csv')
 #     solution = solution[:, 0]
 #     plt.plot(t_span, solution)
 #     plt.legend()
-    
+
 # plt.show()
-    
-    
+
+
 for k in k_values:
     solution = solve_ode(k, t_span, m_max, v_e)
     solution = solution[:, 0]
