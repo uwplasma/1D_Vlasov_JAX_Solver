@@ -3,12 +3,12 @@
 This repository provides a numerical solver for the one-dimensional Vlasov equation using JAX for high-performance computing. The solver leverages GPU acceleration and JAX's automatic differentiation to efficiently simulate plasma wave dynamics, including Landau damping and instability phenomena.
 
 ## Project Overview
-This solver numerically integrates the 1D Vlasov equation to analyze wave propagation, damping rates, and stability in plasma physics. The solver utilizes JAX to achieve high-performance computations, supporting automatic differentiation and GPU/TPU acceleration.
+This solver numerically integrates the 1D linear Vlasov-poisson equation to analyze wave propagation, damping rates, and stability in plasma physics. The solver utilizes JAX to achieve high-performance computations, supporting automatic differentiation and GPU/TPU acceleration.
 
 ## Features
 - **High-performance JAX-based solver:** Leverages JAX's automatic differentiation and just-in-time (JIT) compilation.
 - **Robust analysis tools:** Peak detection, linear fitting, and data export to CSV.
-- **Customizable parameters:** Easy-to-adjust parameters such as wave number (`k`), viscosity (`nu`), and system size (`m_max`).
+- **Customizable parameters:** Easy-to-adjust parameters such as wave number (`k`), Collision (`nu`), and system size (`m_max`).
 
 ## Installation
 ```bash
