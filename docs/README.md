@@ -29,6 +29,7 @@ t_span = jnp.linspace(0, 200, 2001)
 k_values = jnp.linspace(0.01, 0.40, 40)
 nu = 2
 v_e = jnp.array([1,-1])
+q = jnp.array([0,1])
 ```
 
 ## Project Structure
