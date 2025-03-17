@@ -8,7 +8,7 @@ This solver numerically integrates the 1D linear Vlasov-Poisson equation to anal
 ## Features
 - **High-performance JAX-based solver:** Leverages JAX's automatic differentiation and just-in-time (JIT) compilation.
 - **Robust analysis tools:** Peak detection, linear fitting, and data export to CSV.
-- **Customizable parameters:** Easy-to-adjust parameters such as wave number (`k`), collision frequency (`nu`), and system size (`m_max`).
+- **Customizable parameters:** Easy-to-adjust parameters such as wave number (`k`), collision frequency (`nu`), and the mode number for all species (`m_max`).
 
 ## Installation
 ```bash
