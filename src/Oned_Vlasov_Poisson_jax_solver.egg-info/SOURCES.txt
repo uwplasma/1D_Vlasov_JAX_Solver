@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.py
+src/Oned_Vlasov_Poisson_jax_solver.egg-info/PKG-INFO
+src/Oned_Vlasov_Poisson_jax_solver.egg-info/SOURCES.txt
+src/Oned_Vlasov_Poisson_jax_solver.egg-info/dependency_links.txt
+src/Oned_Vlasov_Poisson_jax_solver.egg-info/requires.txt
+src/Oned_Vlasov_Poisson_jax_solver.egg-info/top_level.txt

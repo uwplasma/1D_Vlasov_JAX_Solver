@@ -13,7 +13,7 @@ This solver numerically integrates the 1D linear Vlasov-Poisson equation to anal
 
 ## Installation
 ```bash
-pip install -e
+pip install Oned-Vlasov-Poisson-jax-solver
 ```
 
 ## Usage

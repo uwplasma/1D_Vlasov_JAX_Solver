@@ -1,0 +1,7 @@
+jax
+jaxlib
+diffrax
+numpy
+matplotlib
+scipy
+pandas
