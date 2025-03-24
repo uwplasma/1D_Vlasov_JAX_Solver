@@ -19,7 +19,7 @@ def compute_dfm_dt(f, k, nu, v_e, Nn, index, q):
     n = index - Nn * dn
     dfm_dt = ((- 1j * k * jnp.sqrt(2) * (jnp.sqrt((n + 1) / 2) * f[index + 1] * jnp.sign(Nn - n - 1) +
                                          jnp.sqrt(n / 2) * f[index - 1] + v_e[dn] * f[index]) -
-               (1j / k) * (q[1]**2 * f[0] + f[Nn] * q[1]**2) * jnp.where(n == 1, 1, 0))
+               (1j / k) * (q[0] ** 2 * f[0] + f[Nn] * q[1] ** 2) * jnp.where(n == 1, 1, 0))
               - nu * (n * (n - 1) * (n - 2)) / ((Nn - 1) * (Nn - 2) * (Nn - 3)) * f[index])
     return dfm_dt
 

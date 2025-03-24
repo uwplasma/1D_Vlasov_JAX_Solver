@@ -1,0 +1,4 @@
+include README.md
+include requirements.txt
+include plasma_equation.pdf
+recursive-include src *.csv
