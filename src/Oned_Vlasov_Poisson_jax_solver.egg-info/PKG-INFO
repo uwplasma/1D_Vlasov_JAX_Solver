@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: Oned_Vlasov_Poisson_jax_solver
-Version: 0.1.0
+Version: 0.1.1
 Summary: A fast 1D Vlasov solver using JAX
 Home-page: https://github.com/XYJeff23/1D_Vlasov_JAX_Solver
 Author: Jianfeng Ye
@@ -44,7 +44,7 @@ This solver numerically integrates the 1D linear Vlasov-Poisson equation to anal
 
 ## Installation
 ```bash
-pip install -e
+pip install Oned-Vlasov-Poisson-jax-solver
 ```
 
 ## Usage

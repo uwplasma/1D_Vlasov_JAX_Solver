@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="Oned_Vlasov_Poisson_jax_solver",
-    version="0.1.0",
+    version="0.1.1",
     author="Jianfeng Ye",
     author_email="xyjjeff23@gmail.com",
     description="A fast 1D Vlasov solver using JAX",
