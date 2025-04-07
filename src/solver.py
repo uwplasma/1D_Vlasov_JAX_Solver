@@ -31,4 +31,4 @@ def solver_ode(k, t_span, m_max, v_e, nu, q, objective):
         max_steps=1_000_000
     )
 
-    return jnp.log(jnp.abs(solution.ys))
+    return solution.ys

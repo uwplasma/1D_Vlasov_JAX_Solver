@@ -1,6 +1,8 @@
 import jax.numpy as jnp
 import jax
 import time
+
+import matplotlib.pyplot as plt
 import pandas as pd
 from pathlib import Path
 from scipy.stats import linregress
@@ -24,10 +26,8 @@ mathematica_data = pd.read_csv(Path(__file__).resolve().parents[1] / 'data' / 'g
 slopes = []
 
 for k in k_values:
-    solution = solver_ode(k, t_span, m_max, v_e, nu, q, objective)[:, 0]
+    solution = jnp.log(jnp.abs(solver_ode(k, t_span, m_max, v_e, nu, q, objective)[:, 0]))
     slope, intercept, r_value, p_value, std_err = linregress(t_span, solution)
     slopes.append(slope)
 
 plot_results(k_values, slopes, mathematica_data, m_max)
-
-

@@ -1,4 +1,4 @@
-# One D Vlasov-Poisson Equation JAX Solver
+# One Dimension Vlasov-Poisson Equation JAX Solver
 
 This repository provides a numerical solver for the one-dimensional Vlasov-Poisson equation using JAX for high-performance computing. The solver leverages GPU acceleration and JAX's automatic differentiation to efficiently simulate plasma wave dynamics, including Landau damping and instability phenomena.
 
@@ -47,7 +47,7 @@ v_e = jnp.array([1, -1])
 
 # Charge weights or coefficients associated with the populations.
 # For population one and two.
-q = jnp.array([0, 1])
+q = jnp.array([1, 1])
 ```
 
 ## Mathematical Background

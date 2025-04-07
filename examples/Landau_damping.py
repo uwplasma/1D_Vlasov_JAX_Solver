@@ -15,18 +15,17 @@ start_time = time.time()
 
 m_max = 40
 t_span = jnp.linspace(0, 200, 2001)
-k_values = jnp.linspace(0.01, 0.40, 40)
+k_values = jnp.linspace(0.3, 0.3, 1)
 nu = 2
-v_e = jnp.array([1,0])
+v_e = jnp.array([0,0])
 q = jnp.array([1,0])
 
 mathematica_data = pd.read_csv(Path(__file__).resolve().parents[1] / 'data' / 'damping_rate.csv')
 
 slopes = []
 
-
 for k in k_values:
-    solution = solver_ode(k, t_span, m_max, v_e, nu, q, objective)[:, 0]
+    solution = jnp.log(jnp.abs(solver_ode(k, t_span, m_max, v_e, nu, q, objective)[:, 0]))
 
     # looking for local maxima
     local_maxima_indices, _ = find_peaks(solution)
