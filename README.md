@@ -95,6 +95,12 @@ OneD_Vlasov_Poisson_JAX_Solver/
 │   ├── plot.py                     # Plotting data
 │   └── solver.py                   # Time integrator using Diffrax
 │
+├── test/                            # Core source code
+│   ├── __init__.py                 # Makes src a Python package
+│   ├── test_equations.py                # Hermite-mode RHS and equation definitions
+│   ├── test_plot.py                     # Plotting data
+│   └── test_solver.py                   # Time integrator using Diffrax
+│
 ├── MANIFEST.in                     # Include non-code files in builds (e.g. .csv)
 ├── pyproject.toml                  # Modern build configuration file
 ├── setup.py                        # Traditional setup for pip install
