@@ -83,7 +83,6 @@ OneD_Vlasov_Poisson_JAX_Solver/
 │
 ├── docs/                           # Project documentation
 │   ├── plasma_equation.pdf         # Full derivation of the model equations
-│   └── README.md                   # Main project overview (this file)
 │
 ├── examples/                       # Run-ready example scripts
 │   ├── Landau_damping.py           # Landau damping simulation
@@ -95,15 +94,16 @@ OneD_Vlasov_Poisson_JAX_Solver/
 │   ├── plot.py                     # Plotting data
 │   └── solver.py                   # Time integrator using Diffrax
 │
-├── test/                            # Core source code
-│   ├── __init__.py                 # Makes src a Python package
-│   ├── test_equations.py                # Hermite-mode RHS and equation definitions
-│   ├── test_plot.py                     # Plotting data
-│   └── test_solver.py                   # Time integrator using Diffrax
+├── test/                           # Unit tests (Pytest)
+│   ├── __init__.py
+│   ├── test_equations.py
+│   ├── test_solver.py
+│   └── test_plot.py
 │
 ├── MANIFEST.in                     # Include non-code files in builds (e.g. .csv)
 ├── pyproject.toml                  # Modern build configuration file
 ├── setup.py                        # Traditional setup for pip install
+├── pytest.ini                      # Pytest imformation
 └── README.md                       # Project documentation (top-level entry)
 ```
 
