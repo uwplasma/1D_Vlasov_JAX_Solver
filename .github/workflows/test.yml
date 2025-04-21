@@ -9,11 +9,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install jaxincell
-        run: |
-          python -m pip install --upgrade pip
-          pip install.
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
