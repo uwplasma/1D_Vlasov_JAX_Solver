@@ -24,7 +24,7 @@ jobs:
         run: pip install pytest pytest-cov
 
       - name: Run tests
-        run: pytest --cov --cov-branch --cov-report=xml
+        run: pytest --cov-branch --cov-report=xml --cov=src
 
       - name: Upload results to Codecov
         uses: codecov/codecov-action@v5
