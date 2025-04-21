@@ -40,4 +40,4 @@ for k in k_values:
 plot_results(k_values, slopes, mathematica_data, m_max)
 
 end_time = time.time()
-print(end_time-start_time)
+print("run_time:{:.2f}s".format(end_time-start_time))
