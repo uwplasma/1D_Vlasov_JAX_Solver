@@ -19,7 +19,6 @@ nu = 2
 v_e = jnp.array([0,0])
 q = jnp.array([1,0])
 
-
 sol = jnp.abs(solver_ode(0.03, t_span, m_max, v_e, nu, q, objective))
 
 def reconstruct_fv(f_m_t, v_grid):
@@ -31,18 +30,16 @@ def reconstruct_fv(f_m_t, v_grid):
     """
     T, M = f_m_t.shape
     V = len(v_grid)
-    f_vt = jnp.zeros((T, V))
+    phi_mv = jnp.zeros((M, V))
 
     # Precompute Hermite functions φ_m(v) for all m, v
-    phi_mv = jnp.zeros((M, V))
     for m in range(M):
         Hm_v = eval_hermite(m, v_grid)
-        norm = jnp.sqrt(2**m * factorial(m, exact=False) * jnp.sqrt(jnp.pi))
-        phi_mv = phi_mv.at[m, :].set(Hm_v * jnp.exp(-v_grid**2 / 2) / norm)
+        norm = jnp.sqrt(2 ** m * factorial(m, exact=False) * jnp.sqrt(jnp.pi))
+        phi_mv = phi_mv.at[m].set(Hm_v * jnp.exp(-v_grid ** 2 / 2) / norm)
 
     # Sum over m to reconstruct f(v, t)
-    for t in range(T):
-        f_vt = f_vt.at[t, :].set(jnp.dot(f_m_t[t, :], phi_mv))
+    f_vt = jnp.dot(f_m_t, phi_mv)
 
     return f_vt
 
