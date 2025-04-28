@@ -36,3 +36,11 @@ coverage.xml text
 *.jpeg binary
 *.gif binary
 *.svg text eol=lf
+
+# Ignore documentation and build outputs from language statistics
+docs/** linguist-documentation
+source/_build/** linguist-generated
+dist/** linguist-generated
+*.html linguist-generated
+*.css linguist-generated
+*.js linguist-generated
