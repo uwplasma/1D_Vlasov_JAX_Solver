@@ -1,16 +1,16 @@
 # One Dimension Vlasov-Poisson Equation JAX Solver
 
 <p align="center">
+  <img src="docs/VLAX1D_logo.png" alt="VLAX1D Logo" width="300">
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/github/license/uwplasma/1D_Vlasov_JAX_Solver?style=flat-square&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
   <img src="https://img.shields.io/github/last-commit/uwplasma/1D_Vlasov_JAX_Solver?style=flat-square&logo=git&logoColor=white&color=0080ff" alt="last-commit">
   <img src="https://img.shields.io/github/languages/top/uwplasma/1D_Vlasov_JAX_Solver?style=flat-square&color=0080ff" alt="repo-top-language">
   <a href="https://codecov.io/gh/uwplasma/1D_Vlasov_JAX_Solver">
     <img src="https://codecov.io/gh/uwplasma/1D_Vlasov_JAX_Solver/branch/main/graph/badge.svg?style=flat-square" alt="Coverage">
   </a>
-</p>
-
-<p align="center">
-  <img src="docs/VLAX1D_logo.png" alt="VLAX1D Logo" width="300">
 </p>
 
 This repository provides a numerical solver for the one-dimensional Vlasov-Poisson equation using JAX for high-performance computing. The solver leverages GPU acceleration and JAX's automatic differentiation to efficiently simulate plasma wave dynamics, including Landau damping and instability phenomena.
