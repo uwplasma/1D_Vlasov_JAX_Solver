@@ -10,8 +10,8 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
+import os
+import sys
 # sys.path.insert(0, os.path.abspath('.'))
 import sphinx_rtd_theme
 
@@ -25,7 +25,7 @@ author = 'Jianfeng Ye'
 # The full version, including alpha/beta/rc tags
 release = '0.1.1'
 
-html_logo = "VLAX1D_logo.png"
+html_logo = os.path.join('_static', 'VLAX1D_logo.png')
 
 # -- General configuration ---------------------------------------------------
 
