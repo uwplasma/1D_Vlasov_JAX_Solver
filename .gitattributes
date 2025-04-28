@@ -1,46 +1,56 @@
-# --- Text files (Python source code) ---
-src/**/*.py text eol=lf
-tests/**/*.py text eol=lf
+# --- GitHub Linguist Control ---
 
-# --- Force UTF-8 encoding for source files ---
+# By default, all are marked as vendored (not included in language statistics)
+* linguist-vendored
+
+# Only src/ and tests/ participate in language statistics
+src/** -linguist-vendored
+tests/** -linguist-vendored
+
+# --- Normalize Python and text files ---
+
+# Python source code
 src/**/*.py text eol=lf working-tree-encoding=UTF-8
 tests/**/*.py text eol=lf working-tree-encoding=UTF-8
 
-# --- Make sure Jupyter notebooks (if any) are normalized ---
+# Jupyter notebooks (if any)
 src/**/*.ipynb text eol=lf
 tests/**/*.ipynb text eol=lf
 
-# --- Ignore coverage or build artifacts from affecting Git behavior ---
-*.pyc binary
-*.pyo binary
-__pycache__/ binary
-_build/ binary
-dist/ binary
-coverage.xml text
-.coverage text
-
-# --- General rules ---
+# Documentation and metadata
 *.md text eol=lf
 *.rst text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
 *.yml text eol=lf
 *.yaml text eol=lf
 *.toml text eol=lf
 *.ini text eol=lf
-*.txt text eol=lf
-*.csv text eol=lf
 *.json text eol=lf
 
-# --- Images and binary files (don't change line endings) ---
+# --- Binary files ---
+
+# Images and compiled files
 *.png binary
 *.jpg binary
 *.jpeg binary
 *.gif binary
 *.svg text eol=lf
 
-# Ignore documentation and build outputs from language statistics
-docs/** linguist-documentation
-source/_build/** linguist-generated
-dist/** linguist-generated
-*.html linguist-generated
-*.css linguist-generated
-*.js linguist-generated
+# Archives and wheels
+*.tar.gz binary
+*.whl binary
+
+# Bytecode and cache
+*.pyc binary
+*.pyo binary
+__pycache__/ binary
+
+# --- Coverage and build artifacts ---
+.coverage text
+coverage.xml text
+dist/** binary
+build/** binary
+_build/** binary
+htmlcov/** binary
+docs/_build/** binary
