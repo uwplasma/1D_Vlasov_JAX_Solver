@@ -3,12 +3,13 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to ValX1D's documentation!
+Welcome to VLAX1D's documentation!
 ==================================
 
-ValX1D is a one-dimensional Vlasov-Poisson solver built with JAX.
+VLAX1D is a one-dimensional Vlasov-Poisson solver built with JAX.
 
-.. figure:: Logo.png
+.. figure:: _static/VLAX1D_logo.png
+   :width: 300px
    :align: center
    :alt: VLAX1D Logo
 
