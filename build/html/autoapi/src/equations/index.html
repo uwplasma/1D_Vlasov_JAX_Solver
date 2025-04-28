@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>src.equations &mdash; ValX1D 0.1.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../../_static/documentation_options.js?v=a58bc63e"></script>
+      <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="src.plot" href="../plot/index.html" />
+    <link rel="prev" title="src.Refactoring" href="../Refactoring/index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html">
+            
+              <img src="../../../_static/VLAX1D_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">src</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#submodules">Submodules</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../Refactoring/index.html">src.Refactoring</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">src.equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plot/index.html">src.plot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../solver/index.html">src.solver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#package-contents">Package Contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">ValX1D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">API Reference</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">src</a></li>
+      <li class="breadcrumb-item active">src.equations</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../../_sources/autoapi/src/equations/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-src.equations">
+<span id="src-equations"></span><h1>src.equations<a class="headerlink" href="#module-src.equations" title="Link to this heading">¶</a></h1>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.equations.compute_dfm_dt" title="src.equations.compute_dfm_dt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_dfm_dt</span></code></a>(f, k, nu, v_e, Nn, index, q)</p></td>
+<td><p>Computes the time derivative of a function representing a system described in the</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.equations.objective" title="src.equations.objective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">objective</span></code></a>(t, f, args)</p></td>
+<td><p>Computes the time derivative of the Fourier mode dynamics based on the provided input</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.equations.compute_dfm_dt">
+<span class="sig-prename descclassname"><span class="pre">src.equations.</span></span><span class="sig-name descname"><span class="pre">compute_dfm_dt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.equations.compute_dfm_dt" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the time derivative of a function representing a system described in the
+Fourier and physical space, taking into account effects like wave interactions,
+damping, and external forces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f</strong> – jnp.ndarray
+The wave function represented as an array in the Fourier or physical space.</p></li>
+<li><p><strong>k</strong> – float
+The wave number that determines the spatial frequency of the wave.</p></li>
+<li><p><strong>nu</strong> – float
+The viscosity coefficient impacting energy dissipation.</p></li>
+<li><p><strong>v_e</strong> – jnp.ndarray
+An array specifying velocity factors for the external forces.</p></li>
+<li><p><strong>Nn</strong> – int
+The maximum number of wave modes in the system.</p></li>
+<li><p><strong>index</strong> – int
+The current index in the array representing the mode being evaluated.</p></li>
+<li><p><strong>q</strong> – jnp.ndarray
+An array of coefficients that modify the coupling between modes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>jnp.complex128
+The computed time derivative of the specified wave mode, taking into
+account interactions between different modes and external forces.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.equations.objective">
+<span class="sig-prename descclassname"><span class="pre">src.equations.</span></span><span class="sig-name descname"><span class="pre">objective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.equations.objective" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the time derivative of the Fourier mode dynamics based on the provided input
+parameters and a set of arguments. This function utilizes <cite>jax.vmap</cite> for vectorized map
+computation, applying the <cite>compute_dfm_dt</cite> function over a specific range of modes.</p>
+<p>The computation involves iterating over a sequence of values determined by the provided
+maximum number of modes (<cite>m_max</cite>) and processing elements using the arguments supplied
+in <cite>args</cite>. JAX’s <cite>vmap</cite> is employed to enable efficient parallel application of the
+calculation across multiple data points or modes.</p>
+<p>The function encapsulates a physics-oriented calculation typically used in time-evolution
+simulations, spectrum modeling, or Fourier transform-based computational frameworks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>float</em>) – Current time, treated as a placeholder in this function.</p></li>
+<li><p><strong>f</strong> (<em>jax.numpy.ndarray</em>) – Array of Fourier modes at the current timestep.
+Represents the state or amplitude values of the modes.</p></li>
+<li><p><strong>args</strong> (<em>tuple</em>) – Tuple of additional parameters passed to define the dynamics:
+- k: Wavenumber or characteristic parameter affecting dynamics.
+- v_e: Constant or coefficient influencing velocity evolution.
+- nu: Diffusion or damping coefficient used in the computation.
+- m_max: Maximum number of Fourier modes utilized in the summation.
+- q: External or forcing parameter influencing mode amplitudes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Array containing the time derivatives of the Fourier modes computed over
+the range of indices specified by <cite>m_max</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>jax.numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../Refactoring/index.html" class="btn btn-neutral float-left" title="src.Refactoring" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../plot/index.html" class="btn btn-neutral float-right" title="src.plot" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Jianfeng Ye.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

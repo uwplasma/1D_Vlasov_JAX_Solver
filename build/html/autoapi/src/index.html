@@ -1,0 +1,292 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>src &mdash; ValX1D 0.1.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
+
+  
+      <script src="../../_static/documentation_options.js?v=a58bc63e"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="src.Refactoring" href="Refactoring/index.html" />
+    <link rel="prev" title="API Reference" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html">
+            
+              <img src="../../_static/VLAX1D_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../usage.html">Usage</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API Reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">src</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Refactoring/index.html">src.Refactoring</a></li>
+<li class="toctree-l4"><a class="reference internal" href="equations/index.html">src.equations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="plot/index.html">src.plot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solver/index.html">src.solver</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#package-contents">Package Contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#src.compute_dfm_dt"><code class="docutils literal notranslate"><span class="pre">compute_dfm_dt()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.objective"><code class="docutils literal notranslate"><span class="pre">objective()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.solver_ode"><code class="docutils literal notranslate"><span class="pre">solver_ode()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#src.plot_results"><code class="docutils literal notranslate"><span class="pre">plot_results()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">ValX1D</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">API Reference</a></li>
+      <li class="breadcrumb-item active">src</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/autoapi/src/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-src">
+<span id="src"></span><h1>src<a class="headerlink" href="#module-src" title="Link to this heading">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Refactoring/index.html">src.Refactoring</a></li>
+<li class="toctree-l1"><a class="reference internal" href="equations/index.html">src.equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plot/index.html">src.plot</a></li>
+<li class="toctree-l1"><a class="reference internal" href="solver/index.html">src.solver</a></li>
+</ul>
+</div>
+</section>
+<section id="functions">
+<h2>Functions<a class="headerlink" href="#functions" title="Link to this heading">¶</a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.compute_dfm_dt" title="src.compute_dfm_dt"><code class="xref py py-obj docutils literal notranslate"><span class="pre">compute_dfm_dt</span></code></a>(f, k, nu, v_e, Nn, index, q)</p></td>
+<td><p>Computes the time derivative of a function representing a system described in the</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.objective" title="src.objective"><code class="xref py py-obj docutils literal notranslate"><span class="pre">objective</span></code></a>(t, f, args)</p></td>
+<td><p>Computes the time derivative of the Fourier mode dynamics based on the provided input</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#src.solver_ode" title="src.solver_ode"><code class="xref py py-obj docutils literal notranslate"><span class="pre">solver_ode</span></code></a>(k, t_span, m_max, v_e, nu, q, objective)</p></td>
+<td><p>Solves a system of ordinary differential equations (ODEs) using the specified</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#src.plot_results" title="src.plot_results"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_results</span></code></a>(k_values, slopes, mathematica_data, m_max)</p></td>
+<td><p>Plots the results of the slope versus k value calculation alongside its</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="package-contents">
+<h2>Package Contents<a class="headerlink" href="#package-contents" title="Link to this heading">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="src.compute_dfm_dt">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">compute_dfm_dt</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Nn</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.compute_dfm_dt" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the time derivative of a function representing a system described in the
+Fourier and physical space, taking into account effects like wave interactions,
+damping, and external forces.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f</strong> – jnp.ndarray
+The wave function represented as an array in the Fourier or physical space.</p></li>
+<li><p><strong>k</strong> – float
+The wave number that determines the spatial frequency of the wave.</p></li>
+<li><p><strong>nu</strong> – float
+The viscosity coefficient impacting energy dissipation.</p></li>
+<li><p><strong>v_e</strong> – jnp.ndarray
+An array specifying velocity factors for the external forces.</p></li>
+<li><p><strong>Nn</strong> – int
+The maximum number of wave modes in the system.</p></li>
+<li><p><strong>index</strong> – int
+The current index in the array representing the mode being evaluated.</p></li>
+<li><p><strong>q</strong> – jnp.ndarray
+An array of coefficients that modify the coupling between modes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>jnp.complex128
+The computed time derivative of the specified wave mode, taking into
+account interactions between different modes and external forces.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.objective">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">objective</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.objective" title="Link to this definition">¶</a></dt>
+<dd><p>Computes the time derivative of the Fourier mode dynamics based on the provided input
+parameters and a set of arguments. This function utilizes <cite>jax.vmap</cite> for vectorized map
+computation, applying the <cite>compute_dfm_dt</cite> function over a specific range of modes.</p>
+<p>The computation involves iterating over a sequence of values determined by the provided
+maximum number of modes (<cite>m_max</cite>) and processing elements using the arguments supplied
+in <cite>args</cite>. JAX’s <cite>vmap</cite> is employed to enable efficient parallel application of the
+calculation across multiple data points or modes.</p>
+<p>The function encapsulates a physics-oriented calculation typically used in time-evolution
+simulations, spectrum modeling, or Fourier transform-based computational frameworks.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t</strong> (<em>float</em>) – Current time, treated as a placeholder in this function.</p></li>
+<li><p><strong>f</strong> (<em>jax.numpy.ndarray</em>) – Array of Fourier modes at the current timestep.
+Represents the state or amplitude values of the modes.</p></li>
+<li><p><strong>args</strong> (<em>tuple</em>) – Tuple of additional parameters passed to define the dynamics:
+- k: Wavenumber or characteristic parameter affecting dynamics.
+- v_e: Constant or coefficient influencing velocity evolution.
+- nu: Diffusion or damping coefficient used in the computation.
+- m_max: Maximum number of Fourier modes utilized in the summation.
+- q: External or forcing parameter influencing mode amplitudes.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Array containing the time derivatives of the Fourier modes computed over
+the range of indices specified by <cite>m_max</cite>.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>jax.numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.solver_ode">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">solver_ode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t_span</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_max</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_e</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objective</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.solver_ode" title="Link to this definition">¶</a></dt>
+<dd><p>Solves a system of ordinary differential equations (ODEs) using the specified
+objective function and problem parameters. The solver integrates the system from
+a given initial state over a specified time span. It employs a Dopri5 solver with
+a PID-based step size controller to achieve precise numerical results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k</strong> (<em>Array-like</em>) – Parameter to be passed as an argument to the ODE system.</p></li>
+<li><p><strong>t_span</strong> (<em>Sequence</em><em>[</em><em>float</em><em>]</em>) – Time span over which the ODEs are solved. It must be a sequence
+containing the initial and final times of integration.</p></li>
+<li><p><strong>m_max</strong> (<em>int</em>) – The maximum length used to initialize the state vector for the ODE
+problem.</p></li>
+<li><p><strong>v_e</strong> (<em>float</em>) – Additional argument to be passed into the objective function.</p></li>
+<li><p><strong>nu</strong> (<em>float</em>) – Additional argument to be passed into the objective function.</p></li>
+<li><p><strong>q</strong> (<em>Array-like</em>) – Additional argument to be passed into the objective function.</p></li>
+<li><p><strong>objective</strong> (<em>Callable</em>) – The objective function defining the ODE system. It represents
+the time derivative of the state vector.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The solution of the ODE system, which includes the time-evaluated state
+vector at specified save points.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Array-like</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="src.plot_results">
+<span class="sig-prename descclassname"><span class="pre">src.</span></span><span class="sig-name descname"><span class="pre">plot_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">k_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slopes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mathematica_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m_max</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#src.plot_results" title="Link to this definition">¶</a></dt>
+<dd><p>Plots the results of the slope versus k value calculation alongside its
+comparison with Mathematica data. The generated plot visualizes the
+relationship between the k values and the corresponding slopes, and it
+includes a display of Mathematica’s output for validation purposes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>k_values</strong> – A list or array of values for the variable k.</p></li>
+<li><p><strong>slopes</strong> – A list or array of slope values corresponding to the k_values.</p></li>
+<li><p><strong>mathematica_data</strong> – A DataFrame containing Mathematica’s results for
+slope vs. k, where the first column represents k values and the second
+column represents the associated slopes.</p></li>
+<li><p><strong>m_max</strong> – A numeric value representing the maximum m value used in the
+calculation, which will be displayed in the plot title.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Refactoring/index.html" class="btn btn-neutral float-right" title="src.Refactoring" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2025, Jianfeng Ye.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,7 +1,7 @@
 # One Dimension Vlasov-Poisson Equation JAX Solver
 
 <p align="center">
-  <img src="source/VLAX1D_logo.png" alt="VLAX1D Logo" width="300">
+  <img src="source/_static/VLAX1D_logo.png" alt="VLAX1D Logo" width="300">
 </p>
 
 <p align="center">

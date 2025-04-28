@@ -1,0 +1,46 @@
+src.solver
+==========
+
+.. py:module:: src.solver
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   src.solver.solver_ode
+
+
+Module Contents
+---------------
+
+.. py:function:: solver_ode(k, t_span, m_max, v_e, nu, q, objective)
+
+   Solves a system of ordinary differential equations (ODEs) using the specified
+   objective function and problem parameters. The solver integrates the system from
+   a given initial state over a specified time span. It employs a Dopri5 solver with
+   a PID-based step size controller to achieve precise numerical results.
+
+   :param k: Parameter to be passed as an argument to the ODE system.
+   :type k: Array-like
+   :param t_span: Time span over which the ODEs are solved. It must be a sequence
+       containing the initial and final times of integration.
+   :type t_span: Sequence[float]
+   :param m_max: The maximum length used to initialize the state vector for the ODE
+       problem.
+   :type m_max: int
+   :param v_e: Additional argument to be passed into the objective function.
+   :type v_e: float
+   :param nu: Additional argument to be passed into the objective function.
+   :type nu: float
+   :param q: Additional argument to be passed into the objective function.
+   :type q: Array-like
+   :param objective: The objective function defining the ODE system. It represents
+       the time derivative of the state vector.
+   :type objective: Callable
+   :return: The solution of the ODE system, which includes the time-evaluated state
+       vector at specified save points.
+   :rtype: Array-like
+
+

@@ -1,0 +1,78 @@
+src.Refactoring
+===============
+
+.. py:module:: src.Refactoring
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   src.Refactoring.start_time
+   src.Refactoring.m_max
+   src.Refactoring.t_span
+   src.Refactoring.nu
+   src.Refactoring.v_e
+   src.Refactoring.q
+   src.Refactoring.sol
+   src.Refactoring.v_grid
+   src.Refactoring.f_vt
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   src.Refactoring.reconstruct_fv
+
+
+Module Contents
+---------------
+
+.. py:data:: start_time
+
+.. py:data:: m_max
+   :value: 200
+
+
+.. py:data:: t_span
+   :value: None
+
+
+.. py:data:: nu
+   :value: 2
+
+
+.. py:data:: v_e
+
+.. py:data:: q
+
+.. py:data:: sol
+
+.. py:function:: reconstruct_fv(f_m_t, v_grid)
+
+   Reconstructs the time-evolving function f(v, t) on a velocity grid, given its
+   decomposition in terms of Hermite functions. The reconstruction is performed
+   by computing the Hermite functions for all modes and velocities, normalizing
+   them, and summing over the modes to obtain the desired function.
+
+   :param f_m_t: Coefficients f_m(t) of the Hermite decomposition at each time step.
+                 The shape is (T, M), where T is the number of time steps, and M
+                 is the number of modes.
+   :type f_m_t: ndarray or jnp.ndarray
+   :param v_grid: The velocity grid over which the function is reconstructed.
+                  The length of v_grid corresponds to the number of velocity points.
+   :type v_grid: ndarray or jnp.ndarray
+   :return: The reconstructed function f(v, t) on the velocity grid. The shape of
+            the output is (T, V), where V is the number of velocity points.
+   :rtype: jnp.ndarray
+
+
+.. py:data:: v_grid
+   :value: None
+
+
+.. py:data:: f_vt
+
