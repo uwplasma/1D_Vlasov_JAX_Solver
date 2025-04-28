@@ -25,7 +25,7 @@ author = 'Jianfeng Ye'
 # The full version, including alpha/beta/rc tags
 release = '0.1.1'
 
-html_logo = os.path.join('_static', 'VLAX1D_logo.png')
+html_logo = os.path.join('source','_static', 'VLAX1D_logo.png')
 
 # -- General configuration ---------------------------------------------------
 
