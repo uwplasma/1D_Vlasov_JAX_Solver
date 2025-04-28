@@ -8,8 +8,7 @@ Welcome to ValX1D's documentation!
 
 ValX1D is a one-dimensional Vlasov-Poisson solver built with JAX.
 
-.. figure:: /Users/jianfengye/Desktop/Plasma_project/OneD_Vlasov_Poisson_JAX_Solver/source/_static/VLAX1D_logo.png
-   :width: 300px
+.. figure:: Logo.png
    :align: center
    :alt: VLAX1D Logo
 
