@@ -1,7 +1,5 @@
 # One Dimension Vlasov-Poisson Equation JAX Solver
 
-
-
 <p align="center">
   <img src="https://img.shields.io/github/license/uwplasma/1D_Vlasov_JAX_Solver?style=flat-square&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
   <img src="https://img.shields.io/github/last-commit/uwplasma/1D_Vlasov_JAX_Solver?style=flat-square&logo=git&logoColor=white&color=0080ff" alt="last-commit">
@@ -11,6 +9,9 @@
   </a>
 </p>
 
+<p align="center">
+  <img src="docs/VLAX1D_logo.png" alt="VLAX1D Logo" width="300"/>
+</p>
 
 This repository provides a numerical solver for the one-dimensional Vlasov-Poisson equation using JAX for high-performance computing. The solver leverages GPU acceleration and JAX's automatic differentiation to efficiently simulate plasma wave dynamics, including Landau damping and instability phenomena.
 
@@ -89,34 +90,61 @@ for more detail please check plasma_equation in docs
 ## Project Structure
 ```
 OneD_Vlasov_Poisson_JAX_Solver/
-├── data/                           # Benchmark datasets
-│   ├── damping_rate.csv            # Reference damping rates
-│   └── growth_rate.csv             # Reference growth rates
+├── .github/
+│   └── workflows/
+│       └── test.yml              # GitHub Actions for CI
 │
-├── docs/                           # Project documentation
-│   ├── plasma_equation.pdf         # Full derivation of the model equations
+├── data/
+│   ├── damping_rate.csv          # Reference damping data
+│   └── growth_rate.csv           # Reference instability growth data
 │
-├── examples/                       # Run-ready example scripts
-│   ├── Landau_damping.py           # Landau damping simulation
-│   └── two_stream_instability.py   # Two-stream instability simulation
+├── dist/                         # Python package builds
+│   ├── oned_vlasov_poisson_jax_solver-*.tar.gz
+│   └── oned_vlasov_poisson_jax_solver-*.whl
 │
-├── src/                            # Core source code
-│   ├── __init__.py                 # Makes src a Python package
-│   ├── equations.py                # Hermite-mode RHS and equation definitions
-│   ├── plot.py                     # Plotting data
-│   └── solver.py                   # Time integrator using Diffrax
+├── docs/
+│   ├── plasma_equation.pdf       # Mathematical background
+│   ├── requirements.txt          # Build dependencies for Sphinx
+│   └── VLAX1D_logo.png            # Project logo
 │
-├── test/                           # Unit tests (Pytest)
+├── examples/
+│   ├── Landau_damping.py         # Example: Landau damping
+│   └── two_stream_instability.py # Example: Two-stream instability
+│
+├── source/
+│   ├── conf.py                   # Sphinx configuration
+│   ├── index.rst                 # Sphinx main index
+│   ├── installation.rst
+│   ├── modules.rst
+│   └── usage.rst
+│
+├── src/
+│   ├── Oned_Vlasov_Poisson_jax_solver.egg-info/ # Package metadata
+│   ├── __init__.py
+│   ├── equations.py               # Equation definitions
+│   ├── plot.py                    # Plotting functions
+│   ├── Refactoring.py             # Hermite reconstruction and utilities
+│   └── solver.py                  # Solver using Diffrax
+│
+├── tests/
 │   ├── __init__.py
 │   ├── test_equations.py
-│   ├── test_solver.py
-│   └── test_plot.py
+│   ├── test_plot.py
+│   ├── test_Refactoring.py
+│   └── test_solver.py
 │
-├── MANIFEST.in                     # Include non-code files in builds (e.g. .csv)
-├── pyproject.toml                  # Modern build configuration file
-├── setup.py                        # Traditional setup for pip install
-├── pytest.ini                      # Pytest imformation
-└── README.md                       # Project documentation (top-level entry)
+├── .coverage
+├── coverage.xml
+├── LICENSE
+├── Makefile
+├── make.bat
+├── MANIFEST.in
+├── pyproject.toml
+├── pytest.ini
+├── README.md                     # Project overview
+├── readthedocs.yml                # ReadTheDocs configuration
+├── requirements.txt              # Python runtime requirements
+└── setup.py                       # Setup script for pip installation
 ```
 
 ## Contributing

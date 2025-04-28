@@ -7,7 +7,9 @@ Welcome to ValX1D's documentation!
 ==================================
 
 ValX1D is a one-dimensional Vlasov-Poisson solver built with JAX.
-
+.. image:: VLAX1D_logo.png
+   :width: 300px
+   :align: center
 It supports simulation of phenomena such as Landau damping and two-stream instability.
 
 .. toctree::
@@ -15,12 +17,12 @@ It supports simulation of phenomena such as Landau damping and two-stream instab
    :caption: Contents:
 
    installation
-   usage
    modules
+   usage
 
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+* :ref:`installation`
+* :ref:`modules`
+* :ref:`usage`
