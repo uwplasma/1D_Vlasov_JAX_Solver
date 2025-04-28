@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <img src="docs/VLAX1D_logo.png" alt="VLAX1D Logo" width="300"/>
+  <img src="docs/VLAX1D_logo.png" alt="VLAX1D Logo" width="300">
 </p>
 
 This repository provides a numerical solver for the one-dimensional Vlasov-Poisson equation using JAX for high-performance computing. The solver leverages GPU acceleration and JAX's automatic differentiation to efficiently simulate plasma wave dynamics, including Landau damping and instability phenomena.
