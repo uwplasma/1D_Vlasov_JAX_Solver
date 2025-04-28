@@ -23,10 +23,21 @@ sol = jnp.abs(solver_ode(0.03, t_span, m_max, v_e, nu, q, objective))
 
 def reconstruct_fv(f_m_t, v_grid):
     """
-    Reconstruct f(v, t) from Hermite coefficients.
-    :param f_m_t: Hermite coefficients, shape (T, M)
-    :param v_grid: 1D array of v values
-    :return: f(v, t) array, shape (T, len(v_grid))
+    Reconstructs the time-evolving function f(v, t) on a velocity grid, given its
+    decomposition in terms of Hermite functions. The reconstruction is performed
+    by computing the Hermite functions for all modes and velocities, normalizing
+    them, and summing over the modes to obtain the desired function.
+
+    :param f_m_t: Coefficients f_m(t) of the Hermite decomposition at each time step.
+                  The shape is (T, M), where T is the number of time steps, and M
+                  is the number of modes.
+    :type f_m_t: ndarray or jnp.ndarray
+    :param v_grid: The velocity grid over which the function is reconstructed.
+                   The length of v_grid corresponds to the number of velocity points.
+    :type v_grid: ndarray or jnp.ndarray
+    :return: The reconstructed function f(v, t) on the velocity grid. The shape of
+             the output is (T, V), where V is the number of velocity points.
+    :rtype: jnp.ndarray
     """
     T, M = f_m_t.shape
     V = len(v_grid)
@@ -49,7 +60,7 @@ v_grid = jnp.linspace(-6, 6, 300)
 # Reconstruct particle distribution
 f_vt = reconstruct_fv(sol, v_grid)  # shape (T, V)
 
-plt.plot(v_grid, f_vt[0])
+plt.plot(v_grid, f_vt[10])
 plt.xlabel("Velocity v")
 plt.ylabel("f(v)")
 plt.title("Particle distribution at t = {:.2f}".format(t_span[0]))
