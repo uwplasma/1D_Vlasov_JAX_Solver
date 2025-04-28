@@ -1,0 +1,38 @@
+# --- Text files (Python source code) ---
+src/**/*.py text eol=lf
+tests/**/*.py text eol=lf
+
+# --- Force UTF-8 encoding for source files ---
+src/**/*.py text eol=lf working-tree-encoding=UTF-8
+tests/**/*.py text eol=lf working-tree-encoding=UTF-8
+
+# --- Make sure Jupyter notebooks (if any) are normalized ---
+src/**/*.ipynb text eol=lf
+tests/**/*.ipynb text eol=lf
+
+# --- Ignore coverage or build artifacts from affecting Git behavior ---
+*.pyc binary
+*.pyo binary
+__pycache__/ binary
+_build/ binary
+dist/ binary
+coverage.xml text
+.coverage text
+
+# --- General rules ---
+*.md text eol=lf
+*.rst text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+*.ini text eol=lf
+*.txt text eol=lf
+*.csv text eol=lf
+*.json text eol=lf
+
+# --- Images and binary files (don't change line endings) ---
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg text eol=lf
