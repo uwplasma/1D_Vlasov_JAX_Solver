@@ -1,6 +1,6 @@
 import jax.numpy as jnp
-from src.solver import solver_ode
-from src.equations import objective
+from vlax1d.solver import solver_ode
+from vlax1d.equations import objective
 
 
 def test_solver_ode_output():
