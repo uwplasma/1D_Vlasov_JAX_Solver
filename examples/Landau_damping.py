@@ -5,9 +5,9 @@ import pandas as pd
 from pathlib import Path
 from scipy.signal import find_peaks
 from scipy.stats import linregress
-from src.solver import solver_ode
-from src.equations import objective
-from src.plot import plot_results
+from vlax1d.solver import solver_ode
+from vlax1d.equations import objective
+from vlax1d.plot import plot_results
 
 jax.config.update("jax_enable_x64", True)
 

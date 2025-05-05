@@ -2,7 +2,7 @@
 import jax.numpy as jnp
 import pytest
 from scipy.special import eval_hermite, factorial
-from src.Refactoring import reconstruct_fv
+from vlax1d.Refactoring import reconstruct_fv
 
 
 def test_reconstruct_fv_output_shape():

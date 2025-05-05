@@ -1,5 +1,5 @@
 import jax.numpy as jnp
-from src.equations import objective, compute_dfm_dt
+from vlax1d.equations import objective, compute_dfm_dt
 
 def test_compute_dfm_dt_basic():
     """
