@@ -10,8 +10,8 @@ setup(
     long_description=open("README.md", "r", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
     url="https://github.com/XYJeff23/1D_Vlasov_JAX_Solver",
-    packages=find_packages(where="src"),
-    package_dir={"": "src"},
+    packages=find_packages(where="vlax1d"),
+    package_dir={"": "vlax1d"},
     install_requires=[  # 指定依赖项
         "jax",
         "jaxlib",
