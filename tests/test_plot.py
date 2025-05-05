@@ -1,6 +1,6 @@
 import jax.numpy as jnp
 import pandas as pd
-from src.plot import plot_results
+from vlax1d.plot import plot_results
 
 def test_plot_results_runs():
     """

@@ -3,8 +3,8 @@ import jax.numpy as jnp
 import jax
 import time
 import matplotlib.pyplot as plt
-from src.equations import objective
-from src.solver import solver_ode
+from vlax1d.equations import objective
+from vlax1d.solver import solver_ode
 from scipy.special import eval_hermite, factorial
 
 
